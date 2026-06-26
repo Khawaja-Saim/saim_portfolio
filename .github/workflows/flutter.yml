@@ -27,7 +27,7 @@ jobs:
 
       - run: flutter pub get
 
-      - run: flutter build web --release --base-href /saim_portfolio/
+      - run: flutter build web --release --base-href /Flutter-Portfolio/
 
       - uses: actions/upload-pages-artifact@v3
         with:

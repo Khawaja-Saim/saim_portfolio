@@ -15,9 +15,9 @@ class PortfolioData {
 
   static const List<Map<String, String>> stats = [
     {'number': '3+', 'label': 'Years Experience'},
-    {'number': '15+', 'label': 'Apps Built'},
+    {'number': '30+', 'label': 'Apps Built'},
     {'number': '2', 'label': 'Companies'},
-    {'number': '5+', 'label': 'Live on Stores'},
+    {'number': '5', 'label': 'Live on Stores'},
   ];
 
   static const List<SkillModel> skills = [
@@ -129,7 +129,7 @@ class PortfolioData {
           "Cognize is a simple productivity app to organize your daily life. It lets you add events, notes, reminders, alarms, stopwatch tasks, and upload files like photos and videos. It also includes a secure password-protected folder to keep your private data safe.",
       emoji: AppImages.cognizeAppLogo,
       tags: ['Flutter', 'Firebase', 'GetX', "Push-Notification"],
-      storeLabel: 'Live on App Store',
+      storeLabel: 'Live on Play Store',
       storeUrl:
           'https://play.google.com/store/apps/details?id=com.cognizeapp.app&pcampaignid=web_share',
       thumbColor: const Color(0xFF1a0f22),
