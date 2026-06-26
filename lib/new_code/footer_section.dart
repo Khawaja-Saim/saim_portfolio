@@ -45,5 +45,6 @@ class FooterSection extends StatelessWidget {
         ],
       ),
     );
+    //
   }
 }
