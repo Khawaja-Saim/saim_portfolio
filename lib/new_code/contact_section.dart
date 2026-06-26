@@ -69,8 +69,9 @@ class _ContactSectionState extends State<ContactSection> {
 
   Future<void> _openUrl(String url) async {
     final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri))
+    if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
   }
 
   void _copyToClipboard(String text) {
@@ -81,7 +82,7 @@ class _ContactSectionState extends State<ContactSection> {
           'Copied: $text',
           style: GoogleFonts.inter(color: Colors.white),
         ),
-        backgroundColor: AppColors.primary.withOpacity(0.9),
+        backgroundColor: AppColors.primary.withValues(alpha: .9),
         behavior: SnackBarBehavior.floating,
         duration: const Duration(seconds: 2),
       ),

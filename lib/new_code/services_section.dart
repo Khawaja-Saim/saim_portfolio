@@ -65,12 +65,12 @@ class _ServiceCardState extends State<_ServiceCard> {
                 duration: const Duration(milliseconds: 200),
                 decoration: BoxDecoration(
                   color: _hovered
-                      ? AppColors.primary.withOpacity(0.08)
+                      ? AppColors.primary.withValues(alpha: 0.08)
                       : AppColors.background,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: _hovered
-                        ? AppColors.primary.withOpacity(0.4)
+                        ? AppColors.primary.withValues(alpha: 0.4)
                         : AppColors.border,
                     width: 0.5,
                   ),

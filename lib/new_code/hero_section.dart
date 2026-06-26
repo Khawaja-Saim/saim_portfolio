@@ -207,7 +207,7 @@ class HeroSection extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: AppColors.primary.withOpacity(0.15),
+                      color: AppColors.primary.withValues(alpha: 0.15),
                       width: 1,
                     ),
                   ),
@@ -225,12 +225,12 @@ class HeroSection extends StatelessWidget {
                 shape: BoxShape.circle,
                 gradient: RadialGradient(
                   colors: [
-                    AppColors.primary.withOpacity(0.25),
-                    AppColors.primary.withOpacity(0.05),
+                    AppColors.primary.withValues(alpha: 0.25),
+                    AppColors.primary.withValues(alpha: 0.05),
                   ],
                 ),
                 border: Border.all(
-                  color: AppColors.primary.withOpacity(0.4),
+                  color: AppColors.primary.withValues(alpha: 0.4),
                   width: 2,
                 ),
                 image: DecorationImage(
@@ -283,10 +283,10 @@ class _AvailableBadgeState extends State<_AvailableBadge>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
       decoration: BoxDecoration(
-        color: AppColors.primary.withOpacity(0.1),
+        color: AppColors.primary.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: AppColors.primary.withOpacity(0.3),
+          color: AppColors.primary.withValues(alpha: 0.3),
           width: 0.5,
         ),
       ),
@@ -295,7 +295,7 @@ class _AvailableBadgeState extends State<_AvailableBadge>
         children: [
           AnimatedBuilder(
             animation: _anim,
-            builder: (_, __) => Opacity(
+            builder: (s, ww) => Opacity(
               opacity: _anim.value,
               child: Container(
                 width: 7,
@@ -360,13 +360,13 @@ class _HeroBtnState extends State<_HeroBtn> {
             color: widget.primary
                 ? (_hov ? AppColors.primaryDark : AppColors.primary)
                 : (_hov
-                      ? AppColors.primary.withOpacity(0.1)
+                      ? AppColors.primary.withValues(alpha: 0.1)
                       : Colors.transparent),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
               color: widget.primary
                   ? Colors.transparent
-                  : AppColors.primary.withOpacity(0.4),
+                  : AppColors.primary.withValues(alpha: 0.4),
               width: 0.5,
             ),
           ),

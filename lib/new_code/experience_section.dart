@@ -63,12 +63,12 @@ class _ExperienceCardState extends State<_ExperienceCard> {
               decoration: BoxDecoration(
                 color: widget.index == 0
                     ? AppColors.primary
-                    : AppColors.primary.withOpacity(0.4),
+                    : AppColors.primary.withValues(alpha: 0.4),
                 shape: BoxShape.circle,
                 boxShadow: widget.index == 0
                     ? [
                         BoxShadow(
-                          color: AppColors.primary.withOpacity(0.4),
+                          color: AppColors.primary.withValues(alpha: 0.4),
                           blurRadius: 8,
                         ),
                       ]
@@ -79,7 +79,7 @@ class _ExperienceCardState extends State<_ExperienceCard> {
               Container(
                 width: 1,
                 height: 160,
-                color: AppColors.primary.withOpacity(0.2),
+                color: AppColors.primary.withValues(alpha: 0.2),
               ),
           ],
         ),
@@ -136,11 +136,13 @@ class _ExperienceCardState extends State<_ExperienceCard> {
                                       vertical: 4,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: AppColors.primary.withOpacity(0.1),
+                                      color: AppColors.primary.withValues(
+                                        alpha: 0.1,
+                                      ),
                                       borderRadius: BorderRadius.circular(20),
                                       border: Border.all(
-                                        color: AppColors.primary.withOpacity(
-                                          0.2,
+                                        color: AppColors.primary.withValues(
+                                          alpha: 0.2,
                                         ),
                                         width: 0.5,
                                       ),

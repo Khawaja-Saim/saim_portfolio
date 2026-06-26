@@ -1,3 +1,4 @@
+import 'package:vector_math/vector_math_64.dart' show Matrix4, Vector3;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,21 +71,25 @@ class _ProjectCardState extends State<_ProjectCard> {
       child:
           AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
+                // transform: Matrix4.identity()
+                //   ..translate(0.0, _hovered ? -6.0 : 0.0),
                 transform: Matrix4.identity()
-                  ..translate(0.0, _hovered ? -6.0 : 0.0),
+                  ..translateByVector3(
+                    Vector3(0.0, _hovered ? -6.0 : 0.0, 0.0),
+                  ),
                 decoration: BoxDecoration(
                   color: AppColors.surface,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: _hovered
-                        ? AppColors.primary.withOpacity(0.4)
+                        ? AppColors.primary.withValues(alpha: 0.4)
                         : AppColors.border,
                     width: 0.5,
                   ),
                   boxShadow: _hovered
                       ? [
                           BoxShadow(
-                            color: AppColors.primary.withOpacity(0.12),
+                            color: AppColors.primary.withValues(alpha: 0.12),
                             blurRadius: 24,
                             spreadRadius: 2,
                           ),
@@ -157,13 +162,13 @@ class _ProjectCardState extends State<_ProjectCard> {
                                         vertical: 3,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: AppColors.primary.withOpacity(
-                                          0.1,
+                                        color: AppColors.primary.withValues(
+                                          alpha: 0.1,
                                         ),
                                         borderRadius: BorderRadius.circular(4),
                                         border: Border.all(
-                                          color: AppColors.primary.withOpacity(
-                                            0.2,
+                                          color: AppColors.primary.withValues(
+                                            alpha: 0.2,
                                           ),
                                           width: 0.5,
                                         ),
@@ -191,10 +196,14 @@ class _ProjectCardState extends State<_ProjectCard> {
                                     vertical: 6,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: AppColors.primary.withOpacity(0.15),
+                                    color: AppColors.primary.withValues(
+                                      alpha: 0.15,
+                                    ),
                                     borderRadius: BorderRadius.circular(6),
                                     border: Border.all(
-                                      color: AppColors.primary.withOpacity(0.3),
+                                      color: AppColors.primary.withValues(
+                                        alpha: 0.3,
+                                      ),
                                       width: 0.5,
                                     ),
                                   ),

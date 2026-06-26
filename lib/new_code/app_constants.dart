@@ -23,7 +23,5 @@ class AppStrings {
       "https://drive.google.com/file/d/16DD7RRLPKuGQbEAtzoCWvFDSQCM0cD8o/view?usp=sharing";
 
   static const String heroDesc =
-      // 'I build beautiful, high-performance mobile applications for iOS & Android. '
-      // 'Passionate about clean code, smooth animations, and exceptional user experiences.';
       """Turning ambitious ideas into smooth, production-ready mobile applications. Specialized in clean architecture, performance optimization, and AI integrations. Building beautifully responsive, native-grade experiences for Android, iOS, and Web""";
 }

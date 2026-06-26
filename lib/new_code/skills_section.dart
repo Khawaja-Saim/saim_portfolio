@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:saim_portfolio/new_code/app_constants.dart';
-import 'package:saim_portfolio/new_code/portfolio_data.dart';
 import 'package:saim_portfolio/new_code/responsive.dart';
 
 import 'section_header.dart';
@@ -253,7 +252,7 @@ class _SkillsSectionState extends State<SkillsSection> {
                         border: Border.all(
                           color: isSelected
                               ? AppColors.primary
-                              : AppColors.border.withOpacity(0.5),
+                              : AppColors.border.withValues(alpha: 0.5),
                           width: 1,
                         ),
                       ),
@@ -266,7 +265,7 @@ class _SkillsSectionState extends State<SkillsSection> {
                               : FontWeight.w500,
                           color: isSelected
                               ? Colors.white
-                              : AppColors.textPrimary.withOpacity(0.7),
+                              : AppColors.textPrimary.withValues(alpha: 0.7),
                         ),
                       ),
                     ),
@@ -324,7 +323,7 @@ class _MinimalSkillChipState extends State<_MinimalSkillChip> {
                 ),
                 decoration: BoxDecoration(
                   color: _hovered
-                      ? AppColors.primary.withOpacity(0.06)
+                      ? AppColors.primary.withValues(alpha: 0.06)
                       : AppColors.surface,
                   borderRadius: BorderRadius.circular(
                     6,
