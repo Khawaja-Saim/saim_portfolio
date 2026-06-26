@@ -5,5 +5,5 @@ class AppImages {
   static const String salomoAppLogo = 'assets/icons/salomo_app_icon.png';
   static const String copcupAppLogo = 'assets/icons/copcup_icon.png';
   static const String socialAppLogo = 'assets/icons/social_app_icon.png';
-  static const String myImage = 'assets/Images/my_image.png';
+  static const String myImage = 'assets/icons/my_image.png';
 }

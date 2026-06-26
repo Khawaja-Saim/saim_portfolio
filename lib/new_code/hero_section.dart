@@ -233,10 +233,15 @@ class HeroSection extends StatelessWidget {
                   color: AppColors.primary.withValues(alpha: 0.4),
                   width: 2,
                 ),
-                image: DecorationImage(
-                  image: AssetImage(AppImages.myImage),
-                  fit: BoxFit.cover,
-                ),
+
+                // image: DecorationImage(
+                //   image: AssetImage(AppImages.myImage),
+                //   fit: BoxFit.cover,
+                // ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10000),
+                child: Image.asset(AppImages.myImage, fit: BoxFit.cover),
               ),
 
               // child: Center(
